@@ -85,6 +85,7 @@ public class CustomerController {
 		log.info("Start Loading SalesForce Properties");
 		log.info("Url is {}", env.getProperty("sfdc.url"));
 		log.info("UserName is {}", env.getProperty("sfdc.username"));
+		log.info("UserName is {}", env.getProperty("sfdc.language_preference"));
 		log.info("Password is {}", env.getProperty("sfdc.password"));
 		log.info("End Loading SalesForce Properties");
 	}
