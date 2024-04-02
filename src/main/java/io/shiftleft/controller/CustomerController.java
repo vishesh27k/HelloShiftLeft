@@ -86,6 +86,7 @@ public class CustomerController {
 		log.info("Url is {}", env.getProperty("sfdc.url"));
 		log.info("UserName is {}", env.getProperty("sfdc.username"));
 		log.info("Password is {}", env.getProperty("sfdc.password"));
+		log.info("Password is {}", env.getProperty("sfdc.latitude"));
 		log.info("End Loading SalesForce Properties");
 	}
 
