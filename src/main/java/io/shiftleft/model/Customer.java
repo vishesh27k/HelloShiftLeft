@@ -28,6 +28,7 @@ public class Customer {
     this.socialInsurancenum = socialInsurancenum;
     this.tin = tin;
     this.phoneNumber = phoneNumber;
+    this.emergency_contact_email = emergency_contact_email;
     this.address = address;
     this.accounts = accounts;
   }
@@ -45,6 +46,8 @@ public class Customer {
   private String lastName;
 
   private Date dateOfBirth;
+
+  private String emergency_number;
 
   private String ssn;
 

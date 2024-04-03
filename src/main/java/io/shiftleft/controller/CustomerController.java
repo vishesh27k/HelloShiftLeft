@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -15,11 +16,11 @@ import java.nio.file.Paths;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
+
 import java.util.Base64;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
-
 import java.util.Set;
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletResponse;
@@ -86,6 +87,7 @@ public class CustomerController {
 		log.info("Url is {}", env.getProperty("sfdc.url"));
 		log.info("UserName is {}", env.getProperty("sfdc.username"));
 		log.info("Password is {}", env.getProperty("sfdc.password"));
+		log.info("Password is {}", env.getProperty("sfdc.latitude"));
 		log.info("End Loading SalesForce Properties");
 	}
 
@@ -94,7 +96,7 @@ public class CustomerController {
 		CloseableHttpClient client = HttpClients.createDefault();
 		HttpPost httpPost = new HttpPost(env.getProperty("sfdc.url"));
 		httpPost.setEntity(new StringEntity(event));
-		UsernamePasswordCredentials creds = new UsernamePasswordCredentials(env.getProperty("sfdc.username"),
+		UsernamePasswordCredentials creds = new UsernamePasswordCredentials(env.getProperty("sfdc.username")
 				env.getProperty("sfdc.password"));
 		httpPost.addHeader(new BasicScheme().authenticate(creds, httpPost, null));
 
