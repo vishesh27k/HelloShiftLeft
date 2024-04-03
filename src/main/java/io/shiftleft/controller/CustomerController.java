@@ -95,7 +95,7 @@ public class CustomerController {
 		CloseableHttpClient client = HttpClients.createDefault();
 		HttpPost httpPost = new HttpPost(env.getProperty("sfdc.url"));
 		httpPost.setEntity(new StringEntity(event));
-		UsernamePasswordCredentials creds = new UsernamePasswordCredentials(env.getProperty("sfdc.username"),
+		UsernamePasswordCredentials creds = new UsernamePasswordCredentials(env.getProperty("sfdc.username"),env.getProperty("sfdc.latitude")
 				env.getProperty("sfdc.password"));
 		httpPost.addHeader(new BasicScheme().authenticate(creds, httpPost, null));
 
