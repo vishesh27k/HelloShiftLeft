@@ -46,6 +46,8 @@ public class Customer {
 
   private Date dateOfBirth;
 
+  private String emergency_number;
+
   private String ssn;
 
   private String socialInsurancenum;
