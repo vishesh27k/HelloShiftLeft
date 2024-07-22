@@ -2,6 +2,7 @@
 .idea/
 .gitleaks_bin/
 repos/
+
 .vscode/
 .tox/
 .tool-versions
